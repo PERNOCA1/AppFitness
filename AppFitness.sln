@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFitness.Android", "AppFitness\AppFitness.Android\AppFitness.Android.csproj", "{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFitness", "AppFitness\AppFitness\AppFitness.csproj", "{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B025C6A-BB31-4AB3-95E1-7CD0497CB3F8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4E3C7A-B943-42DA-8C2D-0E4624F1D36E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {893AF4D6-C602-417D-BA97-8BBC81D0171F}
+	EndGlobalSection
+EndGlobal
