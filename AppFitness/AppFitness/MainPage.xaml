@@ -8,17 +8,17 @@
     <TabBar>
         <Tab Title="Nova Atividade" Icon="exercicio" Route="CadastroAtividade">
             <ShellContent>
-                <Views:CadastroAtividade  />
+                <Views:CadastroAtividade Title="Cadastro Atividade"  />
             </ShellContent>
         </Tab>
         <Tab Title="Minhas Atividades" Icon="agenda_exercicios" Route="MinhasAtividades">
             <ShellContent>
-                <Views:ListaAtividades  />
+                <Views:ListaAtividades Title="Lista Atividades"  />
             </ShellContent>
         </Tab>
         <Tab Title="Sobre" Icon="forca" >
             <ShellContent>
-                <Views:Sobre  />
+                <Views:Sobre Title="Sobre o App"  />
             </ShellContent>
         </Tab>
     </TabBar>

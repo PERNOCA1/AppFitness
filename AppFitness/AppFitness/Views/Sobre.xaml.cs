@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AppFitness.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Sobre : ContentView
+    public partial class Sobre : ContentPage
     {
         public Sobre()
         {

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AppFitness.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CadastroAtividade : ContentView
+    public partial class CadastroAtividade : ContentPage
     {
         public CadastroAtividade()
         {
