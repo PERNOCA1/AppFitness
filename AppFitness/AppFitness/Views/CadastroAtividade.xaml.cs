@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using AppFitness.ViewModels;
+
 namespace AppFitness.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,6 +17,19 @@ namespace AppFitness.Views
         public CadastroAtividade()
         {
             InitializeComponent();
+
+            BindingContext = new CadastroAtividadeViewModel();
+        }
+
+        protected override async void OnAppearing()
+        {
+            var vm = (CadastroAtividadeViewModel)BindingContext;
+
+            if(vm.Id == 0)
+            {
+                vm.NovaAtividade.Execute(null);
+            }
+            
         }
     }
 }

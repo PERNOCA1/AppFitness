@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppFitness.Views.CadastroAtividade">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nova" Order="Primary" Command="{Binding NovaAtividade}"/>
+
+        <ToolbarItem Text="Salvar"
+                     IconImageSource="salvar"
+                     Order="Primary"
+                     Command="{Binding SalvarAtividade}"/>
+    </ContentPage.ToolbarItems>
+    
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+            <Label Text="{Binding Id}" />
+
+            <Label Text="Decrição: "/>
+            <Entry Text="{Binding Descricao}" Placeholder="Como foi sua atividade?"/>
+
+            <Label Text="Data: "/>
+            <DatePicker Format="dd/MM/yyyy" Date="{Binding Data}" />
+
+            <Label Text="Peso: "/>
+            <Entry Text="{Binding Peso}" Keyboard="Numeric" Placeholder="Quanto você esta pesando?"/>
+
+            <Label Text="Observações: "/>
+            <Entry Text="{Binding Observacoes}" Placeholder="Algo para lembrar mais tarde?"/>
         </StackLayout>
     </ContentPage.Content>
+    
+    
 </ContentPage>
