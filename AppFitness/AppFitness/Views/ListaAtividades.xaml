@@ -2,11 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppFitness.Views.ListaAtividades">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atualizar"
+                     IconImageSource="reload"
+                     Command="{Binding AtualizarLista}"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout Orientation="Horizontal">
+                <SearchBar Placeholder="Busque por Descrição" Text="{Binding ParametroBuscar}" />
+                <Button Text="Buscar" />
+            </StackLayout>
+            
+            <RefreshView IsRefreshing="{Binding EstaAtualizando, Mode=OneWay}"
+                         Command="{Binding AtualizarLista}">
+                <ListView ItemsSource="{Binding ListaAtividades}">
+                    <ListView.Header>
+                        <Grid RowDefinitions="Auto"
+                              ColumnDefinitions="*,*,*">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Id" />
+                            <Label Grid.Row="0" Grid.Column="1" Text="Descricao" />
+                            <Label Grid.Row="0" Grid.Column="2" Text="Data" />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid RowDefinitions="Auto"
+                                      ColumnDefinitions="*,*,*">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Descricao}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Data, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RefreshView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

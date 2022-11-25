@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using AppFitness.ViewModels;
+
 namespace AppFitness.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -14,7 +16,16 @@ namespace AppFitness.Views
     {
         public ListaAtividades()
         {
+            BindingContext = new ListaAtividadesViewModel();
+
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            var vm = (ListaAtividadesViewModel)BindingContext;
+
+            vm.AtualizarLista.Execute(null);
         }
     }
 }
